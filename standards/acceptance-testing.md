@@ -51,7 +51,6 @@ FORMAT: `<account_name>`:`<sales_permission_level>`:`<proposal_permission_level>
 - `ug_proposal_admin`:`view-only`:`proposal-admin`
 - `ug_inactive`:`none`:`none`
 
-Ask Corey Shuman or Stephen Tuggy for the password.
 
 ## ACCEPTANCE
 
