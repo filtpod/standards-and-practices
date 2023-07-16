@@ -1,0 +1,10 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:latest
+    steps:
+      - checkout
+      - run: bundle install
+      - run: bundle exec danger --verbose
+      - run: bundle exec awesome_bot --allow-redirect --allow-dupe -w awesome_bot --allow-redirect --allow-dupe -w https://github.com/filtpod/ifg/compare/v0.4.0...v0.5.0,https://github.com/filtpod/sinclair-scanner-application,https://github.com/filtpod/sinclair-scanner-application/pull/137,https://github.com/filtpod/FUSDMonitoringAppXamarin,https://github.com/filtpod/rn-by-example,https://github.com/filtpod/fusd-front-desk-kiosk,regexr,https://github.com/filtpod/bw-project-status,https://github.com/filtpod/Aerostar,https://github.com/filtpod/qa-team/projects,https://github.com/filtpod/sundial-mobile-app,https://github.com/filtpod/boilerplate-client-angular/blob/main/docker-compose.yml,https://github.com/filtpod/boilerplate-server-node/blob/develop/docker-compose.yml,https://github.com/filtpod/boilerplate-client-react,https://www.nginx.com/nginx-wiki/build/dirhtml/start/topics/tutorials/config_pitfalls/,127.0.0.1 `find . -name "*.md"`

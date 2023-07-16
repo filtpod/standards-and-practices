@@ -1,0 +1,136 @@
+# Standards and Practices
+
+## Reason for Repo
+
+- Set and maintain standards for EngageAI projects.
+- Have a central repository where other EngageAI members can share knowledge of best practices.
+- Have a reference point to start a new project or answer questions on different topics.
+
+[Click Here](/standards/contributing.md) to contribute!
+
+## Code of Conduct
+
+1. No cussing; we're beyond that.
+2. Keep the requests and issues professional and relevant to the work we're doing at EngageAI.
+3. Treat others with the same respect you would if you were talking to them in person. Don't be a jerk.
+4. Have fun and share your knowledge!
+
+## New to EngageAI?
+
+### Here's what we expect you to know _before_ you write any code:
+
+- Please read _all_ the links included:
+- Take a look at [our **Guidebook**](https://bwtc-handbook.notion.site/BWTC-Handbook-71256770d53f46439aecd989b07d1533) for all your (mostly) non-code related needs!
+
+Get set up with [GitHub](/standards/git-config.md)
+
+#### Git
+
+- [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) workflow
+  - Maintain branches for `main` and `development`
+  - **Branch off** `development` for new features
+  - Request reviews on your Pull Requests to `development`
+  - Merge _reviewed_ code into `development`
+  - When milestone is complete branch off `development` into a new `release` branch
+  - QA the `release` branch, once stable merge `release` branch into `main` (and **tag** it) and also merge back into `development`
+  - For any hot fixes, branch off `main` into a new `hotfix` branch, fix issue, then merge fixes back into `main` (and **tag** it) and also merge into `development`
+  - ![Gitflow diagram](https://nvie.com/img/git-model@2x.png) Credit: <https://nvie.com/posts/a-successful-git-branching-model/>
+- [Branching](/standards/branching.md) at EngageAI
+- [Commit Messages](/standards/commits.md) at EngageAI
+
+#### Code Versioning
+
+- [EngageAI SemVer](/standards/code-versioning.md)
+
+#### Project Setup
+
+- [Using Github Projects](/standards/project-setup.md) to communicate progress
+- [Readme Guidelines](/standards/readme-guidelines.md) to document projects
+- [EditorConfig](/best-practices/development-tools/editorconfig.md) to help with consistent code style
+
+#### Code Review
+
+- [Code Review](/standards/code-reviews.md#process) process at EngageAI
+  - [Code Review Slides](https://docs.google.com/presentation/d/1ouvadgldXhRr_n5GFMyQd-EGbVGi9xwBDgkOuevwVBw/edit#slide=id.g35f391192_00)
+- [Acceptance Testing](/standards/acceptance-testing.md)
+- [Bug Reporting](/standards/bug-reporting.md)
+
+#### Machine Setup
+
+##### Mac: Install:
+
+- [Homebrew](https://brew.sh/)
+- [nvm](https://www.wdiaz.org/how-to-install-nvm-with-homebrew/)
+- [Slack](https://slack.com/downloads/osx)
+  - Sign into engage-ai-workspace.slack.com team with your work email
+- Either [WebStorm](https://www.jetbrains.com/webstorm/download/#section=mac)(See below _before_ you install) or [Visual Studio Code](https://code.visualstudio.com/download)
+
+##### Windows:
+
+- (Optional) Install a third-party antivirus product of your choice.
+- Activate Windows using a valid license key. If you don't already have one, ask HR about getting one.
+- Install all available Microsoft updates, restarting your computer as necessary.
+- Open PowerShell with Administrator privileges. Run `Set-ExecutionPolicy RemoteSigned`. Type Y and press Enter to confirm that you want to make this change. (If you don't perform this step, you will not be able to run **any** PowerShell scripts on your system.)
+- Install the [Chocolatey package manager for Windows](https://chocolatey.org/install).
+- Reopen PowerShell with Administrator privileges, if necessary. Run the [install-apps-via-chocolatey.ps1](/best-practices/development-tools/windows-setup/install-apps-via-chocolatey.ps1) script to install a number of programs you will probably need. (Feel free to peek at this file's contents to see what it contains.)
+- (Optional) From the same PowerShell window, run the command `oosu10`. Here, you can easily configure several settings to have Windows respect your privacy a little more. Just make sure you understand what each setting does before you change it.
+- After running `oosu10`, restart Windows (if applicable).
+- Install Android Studio
+- Install the regular version of Visual Studio (as opposed to Visual Studio Code). Visual Studio Community Edition may be sufficient, or you may need a paid license for Visual Studio Professional, Enterprise, or similar. Either way, ask your PM (Project Manager).
+- You may wish to use the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/faq).
+- Ask your Project Manager if you need to install anything else.
+
+Using Chocolatey has several advantages:
+
+1. You can install most of the software you need just by running a single script.
+2. You can update all of this software later by running `choco upgrade all` as Administrator.
+3. Chocolatey will automatically skip installing browser toolbars and junk like that.
+
+##### AWS Account:
+
+- AWS is our primary platform for deployment (staging and production) so you should familiarize yourself with their [JavaScript SDK](https://aws.amazon.com/sdk-for-node-js/) and [whitepapers](https://aws.amazon.com/whitepapers/).
+
+##### EngageAI Standards & Practices Meetings:
+
+###### Meetings are now split into two types:
+
+- _[Presentations](presentations/README.md)_: Twice a month the software development teams in the EngageAI ecosystem meet on every other Wednesday from 4:00 pm - 5:00 pm PST to share their accomplishments, horror stories, workflow, and lessons learned with the rest of the BW community. While these meetings will generally be developer-focused, we invite anyone in the BW family to drop in and participate. You are highly encouraged to participate actively by leading a meeting on a topic of your choice.
+- _[Workshops](workshops/README.md)_: Once a month we will do a deep dive into a topic of interest for our workflow and/or processes. These will typically take longer than 1 hour and will be a classroom/workshop setting. One developer will lead the workshop and the goal will be to produce developers who are proficient at a skill or process that will help us in our work.
+
+##### Frontend Masters:
+
+- EngageAI main online teaching tool is [Frontend Masters](https://frontendmasters.com/). They have courses on all of the platforms we employ at EngageAI, and you should take advantage of as many as possible.
+
+##### WebStorm:
+
+- If you prefer to use JetBrains' tooling, EngageAI provides us with WebStorm Suite for free. We also use [Visual Studio](https://visualstudio.microsoft.com/) and [Visual Studio Code](https://code.visualstudio.com/).
+
+##### Photoshop:
+
+- If your job entails design work, you will need to get access to the EngageAI Adobe Photoshop license.
+
+## Need Help?
+
+Getting stuck is a natural part of development and happens to the best of us. It's better to reach out than to stay silent, and we encourage you to do so. If you find yourself stuck on a task for more than 45 minutes, here are a couple of places to get help:
+
+##### Problem Solving:
+
+Try to use these suggested ways to better your problem solving skills when stuck on tasks.
+[How to think like a programmer — lessons in problem solving](standards/problem-solving.md)
+
+##### Communication Channels:
+
+1. **Your team channel** - When you start a project, you will be added to a private team channel. Feel free to ask your questions there! Your team lead may be able to help you through your blocker.
+2. **[bwtc-stackoverflow](https://stackoverflow.com/c/bwtc/questions)** - Did you know we have our own Stack Overflow? Take a look, it has some great questions and answers.
+
+#### Problem Solving
+
+While reaching out for help is very important when getting stuck, developers are expected to try and problem solve before seeking help else where. A good read on how to problem solve is listed below
+
+[Problem Solving](https://www.freecodecamp.org/news/how-to-think-like-a-programmer-lessons-in-problem-solving-d1d8bf1de7d2/)
+
+## Contributing to EngageAI
+
+#### You are expected to contribute _something_ to our processes. You can do this in many different ways, such as leading a BW Developer Connect meeting, writing up a markdown sheet for this repository on a topic you are passionate about, leading a workshop, or posting discussion topics in EngageAI's #bwtc-technical-discussions channel.
+
+#### [Click Here](/standards/contributing.md) to start contributing.
